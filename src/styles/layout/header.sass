@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.header
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 23px 50px
+
+  &__logo
+    +font(34px, 51px, 900)
+
+  &__menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 30%
+
+    a
+      +font(13px, 16px, 900)
+      letter-spacing: 0.54px
+      text-transform: uppercase
+      color: $base-dark

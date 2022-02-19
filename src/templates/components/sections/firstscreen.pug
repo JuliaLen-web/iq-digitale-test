@@ -1,11 +1,12 @@
 include ../../mixins/firstscreen-slide
 
-.firstscreen
-  .swiper-container
-    .swiper-wrapper
-      +firstscreen-slide({})
-      +firstscreen-slide({})
-    .swiper-button-next
-      img(src="" alt="")
-    .swiper-button-prev
-      img(src="" alt="")
+.firstscreen.swiper
+  .swiper-wrapper
+    +firstscreen-slide({})
+    +firstscreen-slide({})
+    +firstscreen-slide({})
+    +firstscreen-slide({})
+  .swiper-button-prev
+    img(src=require('@/assets/img/svg/arrow.svg') alt="")
+  .swiper-button-next
+    img(src=require('@/assets/img/svg/arrow.svg') alt="")
