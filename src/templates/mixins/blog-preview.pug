@@ -1,0 +1,12 @@
+mixin blog-preview(params)
+  .blog__preview(class=params.active ? 'blog__item_active' : '')
+    .blog__preview-image
+    .blog__preview-subtitle
+      .blog__preview-subtitle-topic
+      .blog__preview-subtitle-date
+    .blog__preview-title
+    .blog__preview-text
+    .blog__preview-excerpt
+      a(href="javascript:") Read more
+      span.blog__preview-excerpt-arrow
+        img(src="" alt="")
