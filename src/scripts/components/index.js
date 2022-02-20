@@ -1,1 +1,2 @@
+require('./about')
 require('./blog')

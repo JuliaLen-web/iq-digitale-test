@@ -3,10 +3,24 @@
     .decor__square
     .feedback__content
       .feedback__content-text
-        .feedback__content-text-title
-        .feedback__content-text-desc
+        .feedback__content-text-title Start a new project!
+        .feedback__content-text-desc If the path is beautiful, let us not ask where it leads. my religion is very simple. my religion is kindness.
       form.feedback__content-form
-        input
-        input
-        textarea
+        label
+          input(
+            type="text"
+            name="fullName"
+            required
+          )
+          span Your full name
+        label
+          input(
+            type="text"
+            name="email"
+            required
+          )
+          span Your e-mail address
+        textarea(
+          placeholder="Drop us a message here…"
+        )
         button(type="submit" disabled)
