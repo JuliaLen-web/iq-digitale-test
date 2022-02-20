@@ -1,23 +1,35 @@
-.contacts
+.contacts.align-section
   .container
     .title #[span People] behind the scenes
-    .contacts__section
-      .contacts__section-name
-      .contacts__section-position
-      include ../socials
-      .contacts__section-text
-        p Saturday found him for the first time strolling alone through zurich, breathing in the heady smell of his freedom. new adventures hid around each corner.
-        p The future was again a secret. now, what was tiring had disappeared and only the beauty remained.
-    .contacts__gallery
-      .swiper
-        .swiper-wrapper
-          .swiper-slide
-            img(src="" alt="")
-          .swiper-slide
-            img(src="" alt="")
-          .swiper-slide
-            img(src="" alt="")
-          .swiper-slide
-            img(src="" alt="")
-        .swiper-pagination-vertical
+    .contacts__wrap
+      .contacts__section
+        .contacts__section-name Tiara Lyodra
+        .contacts__section-position Head of Product
+        include ../socials
+        .contacts__section-text
+          p Saturday found him for the first time strolling alone through zurich, breathing in the heady smell of his freedom. new adventures hid around each corner.
+          p The future was again a secret. now, what was tiring had disappeared and only the beauty remained.
+      .contacts__gallery
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+            .swiper-slide
+              img(src=require('@/assets/img/cat.jpg') alt="")
+        .contacts__gallery-arrow
+          .swiper-button-prev.
+            !{ require('!svg-inline-loader!@/assets/img/svg/arrow-line.svg') }
+          .swiper-button-next.
+            !{ require('!svg-inline-loader!@/assets/img/svg/arrow-line.svg') }
+
 

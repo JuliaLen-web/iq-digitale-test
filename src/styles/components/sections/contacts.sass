@@ -1,3 +1,54 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
 
+.contacts
+  .title
+    text-align: right
+    max-width: 475px
+    margin-left: auto
+
+  &__wrap
+    display: flex
+
+  &__section
+    width: 30%
+    margin-right: 27px
+
+    &-name
+      +font(28px, 36px, 900)
+
+    &-position
+      +font(13px, 17px, 700)
+      letter-spacing: 0.54px
+      text-transform: uppercase
+
+    &-text
+      +font(15px, 24px)
+
+  &__gallery
+    width: 70%
+    position: relative
+
+    &-arrow
+      position: absolute
+      bottom: 0
+      left: -120px
+      width: 100px
+      height: 20px
+
+  .swiper-wrapper
+    align-items: flex-end
+    height: 400px
+
+  .swiper-slide
+    width: 163px
+    height: 60%
+    transition: .6s
+
+    &.swiper-slide-next + .swiper-slide
+      height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover

@@ -2,12 +2,12 @@ mixin blog-preview(params)
   .blog__preview(class=params.active ? 'blog__preview_active' : '')
     .blog__preview-image
       img(src=require('@/assets/img/cat.jpg') alt="")
-    .blog__preview-subtitle
-      .blog__preview-subtitle-topic #{params.topic}
-      .blog__preview-subtitle-date |  #{params.date}
-    .blog__preview-title #{params.title}
-    .blog__preview-text #{params.text}
-    .blog__preview-excerpt
-      a(href="javascript:") Read more
-      span.blog__preview-excerpt-arrow
-        img(src="" alt="")
+    .blog__preview-wrap
+      .blog__preview-subtitle
+        .blog__preview-subtitle-topic #{params.topic}
+        .blog__preview-subtitle-date |  #{params.date}
+      .blog__preview-title #{params.title}
+      .blog__preview-text #{params.text}
+      a.blog__preview-excerpt(href="javascript:") Read more
+        span.blog__preview-excerpt-arrow
+          img(src="" alt="")

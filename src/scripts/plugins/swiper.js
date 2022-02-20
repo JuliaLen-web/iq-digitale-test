@@ -114,13 +114,16 @@ window.addEventListener('load', () => {
 
   const contacts = new Swiper(".contacts__gallery .swiper", {
     speed: 600,
+    spaceBetween: 27,
     resizeObserver: true,
     observer: true,
     preloadImages: true,
     lazy: true,
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 0,
+    slidesPerView: 4,
     keyboard: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   })
 })

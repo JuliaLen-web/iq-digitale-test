@@ -1,0 +1,35 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.feedback
+  background: rgba(0, 0, 0, 0.05)
+
+  .container
+    padding-top: 100px
+    padding-bottom: 130px
+
+  &__content
+    display: flex
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05))
+
+    &-text,
+    &-form
+      box-sizing: border-box
+
+    &-text
+      background: $base-dark
+      width: 40%
+      height: 700px
+      padding: 100px 45px 100px 50px
+
+    &-form
+      background: $base-lightest
+      width: 60%
+      padding: 120px 45px 100px 80px
+
+    input,
+    textarea
+      width: 100%
+      border: none
+      outline: none
+      border-bottom: 2px solid $accent
