@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.statistics__item
+  position: relative
+  box-sizing: border-box
+  padding: 100px 30px
+  width: 100%
+  color: $base-lightest
+  text-align: center
+  cursor: pointer
+
+  &-num,
+  &-caption
+    position: relative
+    z-index: 2
+
+  &-num
+    +font(80px, 96px)
+    letter-spacing: -2.35px
+
+  &-caption
+    +font(24px, 32px, 900)
+
+  &:after
+    content: ''
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: $base-dark
+    transition: .4s ease-in-out
+
+  &:hover:after
+    transition: .4s ease-in-out
+    background: $accent
+    top: -10px
+    bottom: -10px
+
+
+

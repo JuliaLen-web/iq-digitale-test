@@ -1,6 +1,11 @@
-mixin services-item()
-  .services__item
+mixin services-item(params)
+  .services__item(
+    data-aos=params.animation
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="500"
+  )
     .services__item-icon
       .services__item-icon-image
         img(src="" alt="")
     .services__item-text
+      p My first thought about art, as a child, was that the artist brings something into the world that didn't exist before, and that he does it without destroying something else

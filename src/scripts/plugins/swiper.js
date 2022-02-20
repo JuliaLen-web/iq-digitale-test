@@ -3,11 +3,11 @@ import Swiper, {Pagination, Navigation, Mousewheel, Keyboard, EffectCreative} fr
 Swiper.use([Pagination, Navigation, Mousewheel, Keyboard, EffectCreative])
 
 window.addEventListener('load', () => {
-  if (!document.querySelector('.firstscreen')) {
+  if (!document.querySelector('.swiper')) {
     return false
   }
 
-  const firstscreen = new Swiper(".firstscreen", {
+  const firstscreen = new Swiper(".swiper", {
     speed: 600,
     effect: 'creative',
     creativeEffect: {
@@ -35,7 +35,6 @@ window.addEventListener('load', () => {
     spaceBetween: 0,
     mousewheel: {
       releaseOnEdges: true,
-      sensitivity: 2,
     },
     navigation: {
       nextEl: ".swiper-button-next",

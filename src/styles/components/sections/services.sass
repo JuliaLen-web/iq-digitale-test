@@ -2,4 +2,17 @@
 @use '../../abstracts/mixins' as *
 
 .services
-  height: 1000px
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+  &__slogan
+    width: 100%
+    box-sizing: border-box
+    padding-left: 60%
+    text-align: right
+    +font(48px, 56px, 900)
+
+    span
+      color: $accent

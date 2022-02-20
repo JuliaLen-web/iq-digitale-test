@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.services__item
+  position: relative
+  background: $base-dark
+  width: 42%
+  box-sizing: border-box
+  padding: 40px
+
+  &-icon
+    position: absolute
+    background: $accent
+    border-radius: 50%
+    width: 122px
+    height: 122px
+    top: 30px
+    transition: all .4s ease-in-out
+    cursor: pointer
+    transform: rotateY(0deg)
+
+    &:hover
+      transition: all .4s ease-in-out
+      transform: rotateY(360deg)
+
+  &:nth-child(2n+1)
+    margin-top: 80px
+    margin-bottom: 0
+    padding-left: 88px
+
+    .services__item-icon
+      right: -61px
+
+  &:nth-child(2n)
+    margin-top: 0
+    margin-bottom: 80px
+    padding-right: 88px
+
+    .services__item-icon
+      left: -61px
+
