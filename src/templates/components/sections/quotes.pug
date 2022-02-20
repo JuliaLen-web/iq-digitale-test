@@ -1,13 +1,29 @@
 include ../../mixins/quotes-item
 
-.quotes
-  .swiper
-    .swiper-wrapper
-      +quotes-item({})
-      +quotes-item({})
-      +quotes-item({})
-      +quotes-item({})
-    .swiper-button-next
-      img(src="" alt="")
-    .swiper-button-prev
-      img(src="" alt="")
+.quotes.swiper.banner
+  .swiper-wrapper
+    +quotes-item({
+      creator: 'Anna Karenina',
+      position: 'UX/UI Designer',
+      text: `Saturday found him for the first time strolling alone through zurich,
+        breathing in the heady smell of his freedom. new adventures hid around
+        each corner. The future was again a secret. now, what was tiring`
+    })
+    +quotes-item({
+      creator: 'Tiara Lyodra',
+      position: 'Director',
+      text: `The engine that gives its mysterious inner life to a work of art must be the subterranean
+        expression of a wish, working its way to the surface of a narrative.
+        change is an easy panacea. it takes character to stay in one…`
+    })
+    +quotes-item({
+      creator: 'Лао Цзы',
+      position: 'Философ',
+      text: `Если не знаешь, каковы твои дети, посмотри на их друзей`
+    })
+    +quotes-item({
+      creator: '',
+      position: '',
+      text: ``
+    })
+  include ../swiper-arrow-hr

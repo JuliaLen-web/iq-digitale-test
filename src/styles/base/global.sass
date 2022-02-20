@@ -36,9 +36,9 @@ body
   position: relative
   box-sizing: border-box
   width: 100%
-  max-width: 1366px
+  max-width: 1440px
   margin: 0 auto
-  padding: 0 112px
+  padding: 0 163px
 
 a
   text-decoration: none
@@ -59,4 +59,53 @@ a
     border-radius: 50%
     height: 550px
     width: 550px
+
+.align-section
+  margin-bottom: 120px
+
+.title
+  +font(48px, 54px, 900)
+
+  span
+    color: $accent
+
+.swiper-horizontal.banner
+  .swiper-button-next,
+  .swiper-button-prev
+    background: $base-lightest
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    top: calc(50% - 100px)
+
+    &:after
+      content: none
+
+    img
+      transition: all .3s
+
+  .swiper-button-prev
+    left: -50px
+
+    img
+      transform: rotate(180deg)
+      margin-left: 30px
+
+  .swiper-button-next
+    right: -50px
+
+    img
+      margin-right: 30px
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled
+    opacity: 1
+
+    img
+      opacity: 0.5
+
+
+
+
+
 

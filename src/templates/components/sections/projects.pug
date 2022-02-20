@@ -1,17 +1,19 @@
-.projects
+include ../../mixins/projects-slide
+
+.projects.align-section
   .decor__circle
-  .decor__square
+  .decor__square.decor__square_accent
   .container
-    .projects__title
-    span.projects__line
-    .projects__subtitle
-    .projects__desc
-    .projects__gallery
-      .swiper-container
-        .swiper-wrapper
-          .swiper-slide
-          .swiper-slide
-          .swiper-slide
-        .steps__process
-
-
+    .projects__content
+      .title Our recent #[span projects]
+      span.projects__content-line
+      .projects__content-subtitle Website development for Digital Company
+      .projects__content-desc My first thought about art, as a child, was that the artist brings something into the world that didn't exist before, and that he does it without destroying something else
+    .projects__gallery.swiper
+      .swiper-wrapper
+        +projects-slide({})
+        +projects-slide({})
+        +projects-slide({})
+        +projects-slide({})
+        +projects-slide({})
+      .swiper__process

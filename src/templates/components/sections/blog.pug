@@ -2,10 +2,49 @@ include ../../mixins/blog-preview
 
 .blog
   .container
-    .blog__title
-    +blog-preview({ active: true })
-    +blog-preview({ active: false })
-    +blog-preview({ active: false })
-    +blog-preview({ active: false })
-    +blog-preview({ active: false })
-    +blog-preview({ active: false })
+    .title From our #[span blog]
+    .blog__content
+      +blog-preview({
+        active: true,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: 'Website design',
+        date: 'Thursday, 26 March 2020',
+        text: `The engine that gives its mysterious inner life to a work of art must be
+         the subterranean expression of a wish, working its way to the surface of a narrative.
+         change is an easy panacea. it takes character to stay in one…`
+      })
+      +blog-preview({
+        active: false,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: 'Design',
+        date: ' 15 July 2020',
+        text: ''
+      })
+      +blog-preview({
+        active: false,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: 'Website',
+        date: '',
+        text: ''
+      })
+      +blog-preview({
+        active: false,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: 'Program',
+        date: '',
+        text: ''
+      })
+      +blog-preview({
+        active: false,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: 'Testing',
+        date: '',
+        text: ''
+      })
+      +blog-preview({
+        active: false,
+        title: 'I think night-time is dark so you can imagine with less distraction',
+        topic: '',
+        date: '',
+        text: ''
+      })

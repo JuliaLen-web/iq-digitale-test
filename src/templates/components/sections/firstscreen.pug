@@ -1,12 +1,9 @@
 include ../../mixins/firstscreen-slide
 
-.firstscreen.swiper
+.firstscreen.swiper.banner.align-section
   .swiper-wrapper
     +firstscreen-slide({})
     +firstscreen-slide({})
     +firstscreen-slide({})
     +firstscreen-slide({})
-  .swiper-button-prev
-    img(src=require('@/assets/img/svg/arrow.svg') alt="")
-  .swiper-button-next
-    img(src=require('@/assets/img/svg/arrow.svg') alt="")
+  include ../swiper-arrow-hr

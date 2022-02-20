@@ -1,8 +1,9 @@
-mixin quotes-item()
+mixin quotes-item(params)
   .quotes__item.swiper-slide
     .container
       .quotes__item-image
-      .quotes__item-text
-      .quotes__item-creater
-      .quotes__item-position
+        img(src="" alt="")
+      .quotes__item-text #{params.text}
+      .quotes__item-creator #{params.creator}
+      .quotes__item-position #{params.position}
 

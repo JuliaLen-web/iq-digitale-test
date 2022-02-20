@@ -2,4 +2,54 @@
 @use '../../abstracts/mixins' as *
 
 .projects
-  height: 1000px
+  height: 950px
+
+  .container
+    height: 100%
+
+  &__content
+    width: 40%
+
+    &-line
+      background: $accent
+      height: 6px
+      width: 100px
+      margin: 30px 0
+      display: block
+
+    &-subtitle
+      +font(34px, 51px)
+
+    &-desc
+      +font(15px, 24px)
+
+  &__gallery
+    position: absolute
+    z-index: 1
+    top: 100px
+    right: 0
+    bottom: 0
+    left: 0
+
+    .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets
+      position: absolute
+      z-index: 10
+      top: 70%
+      left: 163px
+      right: auto
+
+      .swiper-pagination-bullet
+        width: 14px
+        height: 14px
+        margin: 30px auto
+        opacity: 1
+        background: $base
+
+        &-active
+          width: 22px
+          height: 22px
+          background: $accent
+
+
+
+

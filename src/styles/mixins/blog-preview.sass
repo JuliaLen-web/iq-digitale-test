@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.blog__preview
+  padding: 20px
+  margin: 20px 0
+  height: fit-content
+  grid-area: sidebar
+  grid-row: auto
+  grid-column: 2 / 3
+  min-height: 50px
+  cursor: pointer
+
+  &-image
+    width: 100%
+    opacity: 0.8
+
+    img
+      width: 100%
+      object-fit: contain
+
+  &-excerpt,
+  &-subtitle-date,
+  &-text
+    opacity: 0
+    transition: .3s
+
+  &_active
+    grid-area: content
+    grid-row: 1 / 5
+    grid-column: 1 / 2
+    position: sticky
+    top: 0
+
+    .blog__preview
+      &-excerpt,
+      &-subtitle-date,
+      &-text
+        opacity: 1
