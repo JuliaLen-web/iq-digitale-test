@@ -72,6 +72,43 @@ a
 .logo
   +font(34px, 51px, 900)
 
+.button
+  width: fit-content
+  box-sizing: border-box
+  padding: 10px 20px
+  text-align: center
+  +font(11px, 24px, 700)
+  letter-spacing: 3.08px
+  text-transform: uppercase
+  border: none
+  outline: none
+  margin: 38px 0 20px auto
+  display: block
+  cursor: pointer
+  transition: .3s
+
+  &_base
+    background: $base-dark
+    color: $base-lightest
+
+    &:hover
+      background: lighten($base-dark, 10%)
+
+    &:disabled,
+    &:disabled:hover
+      background: $base
+
+  &_accent
+    background: $accent
+    color: $base-dark
+
+    &:hover
+      background: lighten($accent, 10%)
+
+    &:disabled,
+    &:disabled:hover
+      background: $base
+
 .swiper-button-next,
 .swiper-button-prev
   &:after

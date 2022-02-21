@@ -49,7 +49,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             esModule: false,
-            name: '[path][name].[hash].[ext]'
+            name: '[path][name].[ext]'
           }
         }
       },

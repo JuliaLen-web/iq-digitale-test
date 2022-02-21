@@ -34,6 +34,36 @@
       background: $base-lightest
       width: 60%
       padding: 120px 45px 100px 80px
+      position: relative
+
+      &:after
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $base-lightest
+        opacity: 0.4
+
+      &.mask:after
+        content: ''
+
+      &-done
+        +font(15px, 24px, 700)
+        position: absolute
+        z-index: 2
+        top: 50%
+        transition: .3s
+        opacity: 0
+
+      &_success
+        &:after
+          content: ''
+          opacity: 1
+
+        .feedback__content-form-done
+          opacity: 1
 
     input,
     textarea

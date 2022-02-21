@@ -5,7 +5,7 @@
       .feedback__content-text
         .feedback__content-text-title Start a new project!
         .feedback__content-text-desc If the path is beautiful, let us not ask where it leads. my religion is very simple. my religion is kindness.
-      form.feedback__content-form
+      form.feedback__content-form.feedback__content-form_success
         label
           input(
             type="text"
@@ -22,5 +22,7 @@
           span Your e-mail address
         textarea(
           placeholder="Drop us a message here…"
+          name="message"
         )
-        button(type="submit" disabled)
+        button.button.button_accent(type="submit" disabled) Send now
+        .feedback__content-form-done Все успешно отправлено! :)
