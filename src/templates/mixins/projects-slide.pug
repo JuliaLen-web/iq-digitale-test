@@ -1,8 +1,8 @@
-mixin projects-slide()
+mixin projects-slide(params)
   .projects__slide.swiper-slide
     .projects__slide-image.projects__slide-image_square
-      img(src=require('@/assets/img/cat.jpg') alt="")
+      img(src=params.photoOne alt="")
     .projects__slide-image.projects__slide-image_vertical
-      img(src=require('@/assets/img/cat.jpg') alt="")
+      img(src=params.photoTwo alt="")
     .projects__slide-image.projects__slide-image_horizontal
-      img(src=require('@/assets/img/cat.jpg') alt="")
+      img(src=params.photoThree alt="")

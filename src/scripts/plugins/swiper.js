@@ -10,7 +10,20 @@ window.addEventListener('load', () => {
   }
 
   const firstscreen = new Swiper(".firstscreen", {
+    resizeObserver: true,
+    observer: true,
     speed: 600,
+    keyboard: true,
+    direction: "horizontal",
+    slidesPerView: 1,
+    spaceBetween: 0,
+    mousewheel: {
+      releaseOnEdges: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     effect: 'creative',
     creativeEffect: {
       prev: {
@@ -22,21 +35,6 @@ window.addEventListener('load', () => {
         opacity: 1
       },
     },
-    resizeObserver: true,
-    observer: true,
-    preloadImages: true,
-    lazy: true,
-    direction: "horizontal",
-    slidesPerView: 1,
-    spaceBetween: 0,
-    mousewheel: {
-      releaseOnEdges: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    keyboard: true,
   })
 
   // slider for quotes section
@@ -45,22 +43,10 @@ window.addEventListener('load', () => {
   }
 
   const quotes = new Swiper(".quotes", {
-    speed: 600,
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        translate: [-400, 0, -400],
-        opacity: 0
-      },
-      next: {
-        translate: ['100%', 0, 0],
-        opacity: 1
-      },
-    },
     resizeObserver: true,
     observer: true,
-    preloadImages: true,
-    lazy: true,
+    speed: 600,
+    keyboard: true,
     direction: "horizontal",
     slidesPerView: 1,
     spaceBetween: 0,
@@ -71,7 +57,6 @@ window.addEventListener('load', () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    keyboard: true,
   })
 
   // slider for projects section
@@ -80,15 +65,13 @@ window.addEventListener('load', () => {
   }
 
   const projects = new Swiper(".projects__gallery", {
-    speed: 800,
     resizeObserver: true,
     observer: true,
-    preloadImages: true,
-    lazy: true,
+    speed: 800,
+    keyboard: true,
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 300,
-    keyboard: true,
     pagination: {
       el: '.swiper__process',
       type: 'bullets',
@@ -113,14 +96,15 @@ window.addEventListener('load', () => {
   }
 
   const contacts = new Swiper(".contacts__gallery .swiper", {
-    speed: 600,
-    spaceBetween: 27,
     resizeObserver: true,
     observer: true,
-    preloadImages: true,
-    lazy: true,
-    slidesPerView: 4,
+    speed: 600,
     keyboard: true,
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 27,
+    slidesPerGroup: 1,
+    slidesPerView: 4,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

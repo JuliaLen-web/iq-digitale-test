@@ -2,11 +2,16 @@
 @use '../../abstracts/mixins' as *
 
 .about
-  margin-top: 80px
+  margin-top: 190px
+
+  .decor__square
+    left: -30px
+    top: -90px
 
   &__video
     position: relative
     width: 50%
+    margin-right: 100px
 
     &-player
       border: none
@@ -31,18 +36,32 @@
         opacity: 0.4
         z-index: 0
 
-      &:after
-        content: ''
+      &-icon
         position: absolute
         top: calc(50% - 40px)
         left: calc(50% - 40px)
-        background: $base-lightest
         border-radius: 50%
         width: 80px
         height: 80px
         display: block
         z-index: 1
+        background: $accent
+        cursor: pointer
+
+        &:before
+          content: ''
+          position: absolute
+          top: calc(50% - 20px)
+          left: calc(50% - 10px)
+          width: 30px
+          height: 40px
+          clip-path: polygon(0 0, 0% 100%, 100% 50%)
+          background: $base-lightest
 
       &_hide
         z-index: 0
 
+  &__text
+    .title,
+    ul
+      margin-bottom: 30px

@@ -1,7 +1,7 @@
 mixin blog-preview(params)
   .blog__preview(class=params.active ? 'blog__preview_active' : '')
     .blog__preview-image
-      img(src=require('@/assets/img/cat.jpg') alt="")
+      img(src=params.picture alt="")
     .blog__preview-wrap
       .blog__preview-subtitle
         .blog__preview-subtitle-topic #{params.topic}

@@ -1,9 +1,9 @@
 include ../../mixins/projects-slide
 
 .projects.align-section
-  .decor__circle
-  .decor__square.decor__square_accent
   .container
+    .decor__square.decor__square_accent
+    .decor__circle
     .projects__content
       .title Our recent #[span projects]
       span.projects__content-line
@@ -11,9 +11,29 @@ include ../../mixins/projects-slide
       .projects__content-desc My first thought about art, as a child, was that the artist brings something into the world that didn't exist before, and that he does it without destroying something else
     .projects__gallery.swiper
       .swiper-wrapper
-        +projects-slide({})
-        +projects-slide({})
-        +projects-slide({})
-        +projects-slide({})
-        +projects-slide({})
+        +projects-slide({
+          photoOne: require('@/assets/img/cat.jpg'),
+          photoTwo: require('@/assets/img/flowers.jpg') ,
+          photoThree: require('@/assets/img/music.jpg')
+        })
+        +projects-slide({
+          photoOne: require('@/assets/img/grass.jpg'),
+          photoTwo: require('@/assets/img/cat.jpg'),
+          photoThree: require('@/assets/img/people.jpg')
+        })
+        +projects-slide({
+          photoOne: require('@/assets/img/music.jpg'),
+          photoTwo: require('@/assets/img/flowers.jpg'),
+          photoThree: require('@/assets/img/cat.jpg')
+        })
+        +projects-slide({
+          photoOne: require('@/assets/img/music.jpg'),
+          photoTwo: require('@/assets/img/cat.jpg'),
+          photoThree: require('@/assets/img/grass.jpg')
+        })
+        +projects-slide({
+          photoOne: require('@/assets/img/cat.jpg'),
+          photoTwo: require('@/assets/img/person_3.jpg'),
+          photoThree: require('@/assets/img/music.jpg')
+        })
       .swiper__process

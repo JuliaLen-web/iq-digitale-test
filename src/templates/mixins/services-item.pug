@@ -6,6 +6,7 @@ mixin services-item(params)
   )
     .services__item-icon
       .services__item-icon-image
-        img(src="" alt="")
-    .services__item-text
-      p My first thought about art, as a child, was that the artist brings something into the world that didn't exist before, and that he does it without destroying something else
+        img(src=params.icon alt="")
+    .services__item-content
+      .services__item-content-caption #{params.caption}
+      p.services__item-content-text #{params.paragraph}

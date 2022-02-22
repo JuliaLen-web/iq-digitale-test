@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
         description: target.querySelector('[name="message"]').value,
       })
       .then(() => {
-        form.classList.add('feedback__content-form_success')
+        form.classList.add('feedback__form_success')
       })
       .catch(error => {
         console.log(error)

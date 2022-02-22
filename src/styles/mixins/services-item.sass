@@ -18,6 +18,11 @@
     transition: all .4s ease-in-out
     cursor: pointer
     transform: rotateY(0deg)
+    box-sizing: border-box
+    padding: 33px
+
+    img
+      width: 100%
 
     &:hover
       transition: all .4s ease-in-out
@@ -26,7 +31,7 @@
   &:nth-child(2n+1)
     margin-top: 80px
     margin-bottom: 0
-    padding-left: 88px
+    padding-right: 88px
 
     .services__item-icon
       right: -61px
@@ -34,8 +39,18 @@
   &:nth-child(2n)
     margin-top: 0
     margin-bottom: 80px
-    padding-right: 88px
+    padding-left: 88px
 
     .services__item-icon
       left: -61px
+
+  &-content
+    color: $base-lightest
+
+    &-caption
+      +font(34px, 51px, 900)
+
+    &-text
+      +font(15px, 24px)
+
 

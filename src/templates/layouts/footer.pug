@@ -1,3 +1,4 @@
+include ../mixins/socials
 footer.footer
   .container
     .footer__column.footer__column_brief
@@ -25,5 +26,12 @@ footer.footer
     .footer__column
       .footer__column-title Address
       a(href="javascript:") 123 Lorem Ipsum Street  Jakarta, Indonesia
-      include ../components/socials
+      +social({
+        iconOne: '',
+        hrefOne: '',
+        iconTwo: '',
+        hrefTwo: '',
+        iconThree: '',
+        hrefThree: '',
+      })
 

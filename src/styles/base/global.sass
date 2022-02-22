@@ -32,6 +32,9 @@ body
   margin: 0 auto
   position: relative
 
+.wrap
+  display: flex
+
 .container
   position: relative
   box-sizing: border-box
@@ -42,14 +45,29 @@ body
 
 a
   text-decoration: none
+  color: $base-dark
+
+p
+  +font(15px, 24px)
+
+ul
+  padding-left: 20px
+
+  li
+    +font(15px, 24px)
+    margin: 0 0 10px
 
 .decor
   &__square,
   &__circle
     background: $base-dark
     position: absolute
-    z-index: 0
+    z-index: -1
     opacity: 0.05
+
+    &_accent
+      background: $accent
+      opacity: 1
 
   &__square
     width: 370px
@@ -82,7 +100,6 @@ a
   text-transform: uppercase
   border: none
   outline: none
-  margin: 38px 0 20px auto
   display: block
   cursor: pointer
   transition: .3s
@@ -92,7 +109,7 @@ a
     color: $base-lightest
 
     &:hover
-      background: lighten($base-dark, 10%)
+      background: lighten($base-dark, 15%)
 
     &:disabled,
     &:disabled:hover
@@ -103,7 +120,7 @@ a
     color: $base-dark
 
     &:hover
-      background: lighten($accent, 10%)
+      background: lighten($accent, 15%)
 
     &:disabled,
     &:disabled:hover
@@ -113,6 +130,10 @@ a
 .swiper-button-prev
   &:after
     content: none
+
+.swiper-button-prev svg
+  transform: rotate(180deg)
+  margin-top: 2px
 
 .swiper-horizontal.banner
   .swiper-button-next,

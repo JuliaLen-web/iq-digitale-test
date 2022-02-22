@@ -3,7 +3,35 @@ include ../../mixins/services-item
 .services.align-section
   .container
     .title We’re always ready for #[span challenges]
-    +services-item({ animation: 'fade-up' })
-    +services-item({ animation: 'fade-up' })
-    +services-item({ animation: 'fade-up' })
-    +services-item({ animation: 'fade-up' })
+    +services-item({
+      icon: require('@/assets/img/svg/monitor.svg'),
+      caption: 'Web Development',
+      paragraph: `My first thought about art, as a child,
+        was that the artist brings something into the world that didn't exist before,
+        and that he does it without destroying something else`,
+      animation: 'fade-up'
+    })
+    +services-item({
+      icon: require('@/assets/img/svg/book.svg'),
+      caption: 'UI/UX Design',
+      paragraph: `My first thought about art, as a child,
+        was that the artist brings something into the world that didn't exist before,
+        and that he does it without destroying something else`,
+      animation: 'fade-up'
+    })
+    +services-item({
+      icon: require('@/assets/img/svg/chat.svg'),
+      caption: 'Digital Marketing',
+      paragraph: `My first thought about art, as a child,
+        was that the artist brings something into the world that didn't exist before,
+        and that he does it without destroying something else`,
+      animation: 'fade-up'
+    })
+    +services-item({
+      icon: require('@/assets/img/svg/email.svg'),
+      caption: 'Brand Design',
+      paragraph: `My first thought about art, as a child,
+        was that the artist brings something into the world that didn't exist before,
+        and that he does it without destroying something else`,
+      animation: 'fade-up'
+    })

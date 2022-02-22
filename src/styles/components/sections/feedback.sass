@@ -8,62 +8,67 @@
     padding-top: 100px
     padding-bottom: 130px
 
-  &__content
-    display: flex
+  .decor__square
+    width: 154px
+    height: 208px
+    top: 30px
+    left: 80px
+
+  .wrap
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05))
 
-    &-text,
-    &-form
-      box-sizing: border-box
+  &__text,
+  &__form
+    box-sizing: border-box
 
-    &-text
-      background: $base-dark
-      color: $base-lightest
-      width: 40%
-      height: 700px
-      padding: 100px 50px 100px 50px
+  &__text
+    background: $base-dark
+    color: $base-lightest
+    width: 40%
+    height: 700px
+    padding: 100px 50px 100px 50px
 
-      &-title
-        +font(48px, 56px, 900)
-        margin-bottom: 26px
+    &-title
+      +font(48px, 56px, 900)
+      margin-bottom: 26px
 
-      &-desc
-        +font(15px, 24px)
+    &-desc
+      +font(15px, 24px)
 
-    &-form
+  &__form
+    background: $base-lightest
+    width: 60%
+    padding: 120px 45px 100px 80px
+    position: relative
+
+    &:after
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
       background: $base-lightest
-      width: 60%
-      padding: 120px 45px 100px 80px
-      position: relative
+      opacity: 0.4
 
+    &.mask:after
+      content: ''
+
+    &-done
+      +font(15px, 24px, 700)
+      position: absolute
+      z-index: 2
+      top: 50%
+      transition: .3s
+      opacity: 0
+
+    &_success
       &:after
-        position: absolute
-        z-index: 1
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background: $base-lightest
-        opacity: 0.4
-
-      &.mask:after
         content: ''
+        opacity: 1
 
-      &-done
-        +font(15px, 24px, 700)
-        position: absolute
-        z-index: 2
-        top: 50%
-        transition: .3s
-        opacity: 0
-
-      &_success
-        &:after
-          content: ''
-          opacity: 1
-
-        .feedback__content-form-done
-          opacity: 1
+      .feedback__form-done
+        opacity: 1
 
     input,
     textarea
@@ -101,3 +106,6 @@
 
     textarea
       height: 160px
+
+    .button
+      margin: 38px 0 20px auto

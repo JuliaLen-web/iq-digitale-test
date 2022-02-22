@@ -8,3 +8,24 @@
     display: flex
     align-items: center
     justify-content: space-between
+
+    &:hover .statistics__item
+      &,
+      &:nth-child(3)
+        .statistics__item-num
+          color: $accent
+
+        &:after
+          top: 0
+          bottom: 0
+          background: $base-dark
+
+      &:hover
+        .statistics__item-num
+          color: $base-lightest
+
+        &:after
+          transition: .4s ease-in-out
+          background: $accent
+          top: -10px
+          bottom: -10px

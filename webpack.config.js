@@ -17,7 +17,7 @@ module.exports = {
     app: ['@babel/polyfill', './app.js']
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -75,7 +75,7 @@ module.exports = {
       'process.env': JSON.stringify(dotenv.parsed)
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
+      filename: '[name].css'
     }),
     ...pages.map(page => {
       return new HTMLWebpackPlugin({
