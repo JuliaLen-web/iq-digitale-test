@@ -3,6 +3,10 @@ import axios from 'axios'
 window.addEventListener('load', () => {
   const form = document.querySelector('.feedback form')
 
+  if (!form) {
+    return false
+  }
+
   const fields = form.querySelectorAll('input, textarea')
   const requiredFields = form.querySelectorAll('input[required]')
   const button = form.querySelector('button[type=submit]')

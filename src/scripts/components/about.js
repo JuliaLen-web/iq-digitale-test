@@ -2,6 +2,10 @@ window.addEventListener('load', () => {
   const btn = document.querySelector('.about__video-btn')
   const player = document.querySelector('.about__video-player')
 
+  if (!btn) {
+    return false
+  }
+
   btn.addEventListener('click',()=> {
     console.log('yrs')
     btn.classList.add('about__video-btn_hide')
