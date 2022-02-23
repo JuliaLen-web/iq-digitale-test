@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   }
 
   btn.addEventListener('click',()=> {
-    console.log('yrs')
     btn.classList.add('about__video-btn_hide')
     player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
   });
