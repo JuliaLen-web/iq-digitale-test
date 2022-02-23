@@ -2,7 +2,11 @@
   .container
     .decor__square
     .wrap
-      .about__video
+      .about__video(
+        data-aos="fade-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="500"
+      )
         iframe.about__video-player(
           width="560"
           height="315"
@@ -11,7 +15,11 @@
         )
         .about__video-btn
           .about__video-btn-icon
-      .about__text
+      .about__text(
+        data-aos="fade-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="500"
+      )
         .title The thing about us is #[span we think big, huge]
         ul
           li If the path is beautiful, let us not ask where it leads

@@ -57,6 +57,17 @@ window.addEventListener('load', () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    effect: 'creative',
+    creativeEffect: {
+      prev: {
+        translate: [-400, 0, -400],
+        opacity: 0
+      },
+      next: {
+        translate: ['100%', 0, 0],
+        opacity: 1
+      },
+    },
   })
 
   // slider for projects section

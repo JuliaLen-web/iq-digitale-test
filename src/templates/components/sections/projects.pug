@@ -4,12 +4,21 @@ include ../../mixins/projects-slide
   .container
     .decor__square.decor__square_accent
     .decor__circle
-    .projects__content
+    .projects__content(
+      data-aos="fade-up"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="500"
+    )
       .title Our recent #[span projects]
       span.projects__content-line
       .projects__content-subtitle Website development for Digital Company
       p My first thought about art, as a child, was that the artist brings something into the world that didn't exist before, and that he does it without destroying something else
-    .projects__gallery.swiper
+    .projects__gallery.swiper(
+      data-aos="fade-up"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="600"
+      data-aos-delay="150"
+    )
       .swiper-wrapper
         +projects-slide({
           photoOne: require('@/assets/img/cat.jpg'),

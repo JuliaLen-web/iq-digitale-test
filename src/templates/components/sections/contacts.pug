@@ -8,17 +8,21 @@ include ../../mixins/socials
         .contacts__section-name Tiara Lyodra
         .contacts__section-position Head of Product
         +social({
-          iconOne: '',
-          hrefOne: '',
-          iconTwo: '',
-          hrefTwo: '',
-          iconThree: '',
-          hrefThree: '',
+          iconOne: require('@/assets/img/svg/facebook-accent.svg'),
+          hrefOne: 'https://www.facebook.com/',
+          iconTwo: require('@/assets/img/svg/instagram.svg'),
+          hrefTwo: 'https://www.instagram.com/',
+          iconThree: require('@/assets/img/svg/linkin.svg'),
+          hrefThree: 'https://ru.linkedin.com/',
         })
         .contacts__section-text
           p Saturday found him for the first time strolling alone through zurich, breathing in the heady smell of his freedom. new adventures hid around each corner.
           p The future was again a secret. now, what was tiring had disappeared and only the beauty remained.
-      .contacts__gallery
+      .contacts__gallery(
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="500"
+      )
         .swiper
           .swiper-wrapper
             .swiper-slide

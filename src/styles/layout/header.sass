@@ -18,7 +18,21 @@
     width: 30%
 
     a
+      position: relative
       +font(13px, 16px, 900)
       letter-spacing: 0.54px
       text-transform: uppercase
       color: $base-dark
+
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -5px
+        background: $base-dark
+        height: 2px
+        width: 0
+        transition: .3s
+
+      &:hover:after
+        width: 100%
