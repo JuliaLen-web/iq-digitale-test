@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
   const btnHome = document.querySelector('.recaptcha .button')
 
-  if (!document.querySelector('#recaptcha')) {
+  if (!document.querySelector('.recaptcha')) {
     return false
   }
 
