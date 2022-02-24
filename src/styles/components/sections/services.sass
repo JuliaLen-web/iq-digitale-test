@@ -6,9 +6,16 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-around
+    +screen($desktop-sm)
+      padding-left: 50px
+      padding-right: 50px
 
   .title
     width: 100%
     box-sizing: border-box
     padding-left: 60%
     text-align: right
+    +screen($desktop-sm)
+      padding-left: 0
+      text-align: left
+      margin-bottom: 30px

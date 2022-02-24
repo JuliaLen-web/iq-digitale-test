@@ -10,22 +10,31 @@
 
   &__video
     position: relative
-    width: 50%
-    min-width: 560px
-    height: fit-content
+    width: 100%
     margin-right: 9%
+    +screen($tablet)
+      margin-right: 0
+      margin-bottom: 20px
 
     &-player
-      border: none
       position: relative
-      z-index: 1
+      padding-bottom: 56.25%
+
+      iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-width: 0
+        outline-width: 0
 
     &-btn
       position: absolute
       z-index: 2
       top: 0
       right: 0
-      bottom: 2px
+      bottom: 0
       left: 0
 
       &:before

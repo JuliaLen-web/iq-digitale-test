@@ -9,6 +9,8 @@
   align-content: center
   box-sizing: border-box
   padding-left: 95px
+  +screen($desktop-sm)
+    padding-left: 50px
 
   &-image
     background: $base
@@ -23,12 +25,24 @@
       width: 543px
       height: 500px
       margin-right: 27px
+      +screen($desktop-sm)
+        width: 55%
+      +screen($tablet)
+        height: 250px
 
     &_vertical
       width: 448px
       height: 500px
+      +screen($desktop-sm)
+        width: 45%
+      +screen($tablet)
+        height: 250px
 
     &_horizontal
       width: 448px
       height: 306px
       margin-top: 27px
+      +screen($desktop-sm)
+        width: 45%
+      +screen($tablet)
+        height: 158px

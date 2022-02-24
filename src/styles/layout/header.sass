@@ -7,15 +7,25 @@
     justify-content: space-between
     align-items: center
     padding: 23px 50px
+    +screen($desktop-sm)
+      flex-wrap: wrap
+    +screen($tablet)
+      padding: 10px 20px
 
   .logo
     color: $base-dark
+    flex-shrink: 0
 
   &__menu
     display: flex
     align-items: center
     justify-content: space-between
     width: 30%
+    flex-shrink: 0
+    +screen($desktop-sm)
+      width: 70%
+    +screen($tablet)
+      width: 100%
 
     a
       position: relative
@@ -23,6 +33,9 @@
       letter-spacing: 0.54px
       text-transform: uppercase
       color: $base-dark
+      +screen($tablet)
+        letter-spacing: normal
+        +font(11px, 14px, 900)
 
       &:after
         content: ''

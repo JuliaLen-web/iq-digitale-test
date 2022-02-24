@@ -3,6 +3,8 @@
 
 .projects
   height: 950px
+  +screen($tablet)
+    height: 650px
 
   .container
     height: 100%
@@ -19,6 +21,8 @@
 
   &__content
     width: 40%
+    +screen($tablet)
+      width: 50%
 
     &-line
       background: $accent
@@ -38,6 +42,11 @@
     right: 0
     bottom: 0
     left: 0
+    +screen($desktop-sm)
+      left: 20px
+      right: 20px
+    +screen($tablet)
+      top: 200px
 
     .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets
       position: absolute
@@ -46,6 +55,8 @@
       left: 163px
       right: auto
       cursor: pointer
+      +screen($desktop-sm)
+        left: 0
 
       .swiper-pagination-bullet
         width: 14px

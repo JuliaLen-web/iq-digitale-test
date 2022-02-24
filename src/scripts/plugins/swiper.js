@@ -88,17 +88,31 @@ window.addEventListener('load', () => {
       type: 'bullets',
       clickable: true
     },
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        translate: [0, 0, 0],
-        opacity: 0
+
+    breakpoints: {
+      // when window width is >= 575px
+      575: {
       },
-      next: {
-        translate: [0, 0, 0],
-        opacity: 0
+      // when window width is >= 770px
+      770: {
+        grabCursor: true,
       },
-    },
+      // when window width is >= 1024px
+      1024: {
+        grabCursor: false,
+        effect: 'creative',
+        creativeEffect: {
+          prev: {
+            translate: [0, 0, 0],
+            opacity: 0
+          },
+          next: {
+            translate: [0, 0, 0],
+            opacity: 0
+          },
+        },
+      }
+    }
   })
 
   // slider for contacts section

@@ -20,9 +20,13 @@
     letter-spacing: -2.35px
     transition: .4s ease-in-out
     color: $accent
+    +screen($desktop-sm)
+      +font(56px, 80px)
 
   &-caption
     +font(24px, 32px, 900)
+    +screen($desktop-sm)
+      +font(18px, 24px, 900)
 
   &:after
     content: ''

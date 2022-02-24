@@ -17,15 +17,10 @@
   .wrap
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05))
 
-  &__text,
-  &__form
-    box-sizing: border-box
-
   &__text
     background: $base-dark
     color: $base-lightest
     width: 40%
-    height: 700px
     padding: 100px 50px 100px 50px
 
     &-title
@@ -114,3 +109,9 @@
 
     .button
       margin: 38px 0 20px auto
+
+  &__text,
+  &__form
+    box-sizing: border-box
+    +screen($tablet)
+      width: 100%

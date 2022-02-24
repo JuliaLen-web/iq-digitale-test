@@ -18,6 +18,11 @@
     justify-content: center
     box-sizing: border-box
     padding-right: 96px
+    +screen($desktop-sm)
+      width: 100%
+      padding: 0 50px
+      position: relative
+      z-index: 1
 
     &-title
       +font(60px, 60px, 900)
@@ -31,6 +36,8 @@
     top: 0
     right: 0
     bottom: 0
+    +screen($desktop-sm)
+      width: 100%
 
     &:before
       content: ''
@@ -42,6 +49,8 @@
       background: $base
       mix-blend-mode: hard-light
       opacity: 0.4
+      +screen($desktop-sm)
+        opacity: 0.9
 
     img
       object-fit: cover

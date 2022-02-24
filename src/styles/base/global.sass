@@ -50,6 +50,10 @@ body
 
 .wrap
   display: flex
+  +screen($tablet)
+    flex-wrap: wrap
+  +screen($mobile)
+    flex-direction: column
 
 .container
   position: relative
@@ -170,6 +174,7 @@ ul
     left: -50px
 
     img
+      transition: none
       transform: rotate(180deg)
       margin-left: 30px
 
