@@ -103,9 +103,13 @@ ul
 
 .align-section
   margin-bottom: 120px
+  +screen($tablet)
+    margin-bottom: 60px
 
 .title
   +font(48px, 54px, 900)
+  +screen($mobile)
+    +font(30px, 36px, 900)
 
   span
     color: $accent
@@ -166,23 +170,36 @@ ul
     height: 100px
     border-radius: 50%
     top: calc(50% - 50px)
+    +screen($tablet)
+      width: 60px
+      height: 60px
+      top: calc(50% - 30px)
 
     img
       transition: all .3s
+      width: 10px
 
   .swiper-button-prev
     left: -50px
+    +screen($tablet)
+      left: -30px
 
     img
       transition: none
       transform: rotate(180deg)
       margin-left: 30px
+      +screen($tablet)
+        margin-left: 15px
 
   .swiper-button-next
     right: -50px
+    +screen($tablet)
+      right: -30px
 
     img
       margin-right: 30px
+      +screen($tablet)
+        margin-right: 15px
 
   .swiper-button-prev.swiper-button-disabled,
   .swiper-button-next.swiper-button-disabled

@@ -7,12 +7,18 @@
   .container
     padding-top: 100px
     padding-bottom: 130px
+    +screen($tablet)
+      padding-top: 50px
+      padding-bottom: 50px
 
   .decor__square
     width: 154px
     height: 208px
     top: 30px
     left: 80px
+    +screen($tablet)
+      left: 0
+      top: -30px
 
   .wrap
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05))
@@ -21,7 +27,7 @@
     background: $base-dark
     color: $base-lightest
     width: 40%
-    padding: 100px 50px 100px 50px
+    padding: 100px 50px
 
     &-title
       +font(48px, 56px, 900)
@@ -35,6 +41,8 @@
     width: 60%
     padding: 120px 45px 100px 80px
     position: relative
+    +screen($tablet)
+      padding: 100px 50px
 
     &:after
       position: absolute
@@ -115,3 +123,5 @@
     box-sizing: border-box
     +screen($tablet)
       width: 100%
+    +screen($mobile-sm)
+      padding: 50px 20px
