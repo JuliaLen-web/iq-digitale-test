@@ -20,6 +20,10 @@
     transform: rotateY(0deg)
     box-sizing: border-box
     padding: 33px
+    +screen($mobile-sm)
+      width: 50px
+      height: 50px
+      padding: 10px
 
     img
       width: 100%
@@ -35,6 +39,9 @@
 
     .services__item-icon
       right: -61px
+      +screen($mobile-sm)
+        right: 15px
+        top: 15px
 
   &:nth-child(2n)
     margin-top: 0
@@ -43,11 +50,26 @@
 
     .services__item-icon
       left: -61px
+      +screen($mobile-sm)
+        left: auto
+        right: 15px
+        top: 15px
+
+  &:nth-child(2n+1),
+  &:nth-child(2n)
+    +screen($tablet)
+      width: auto
+      margin: 0 30px 60px
+    +screen($mobile-sm)
+      margin: 0 0 30px
+      padding: 20px
 
   &-content
     color: $base-lightest
 
     &-caption
       +font(34px, 51px, 900)
+      +screen($mobile-sm)
+        width: 80%
 
 

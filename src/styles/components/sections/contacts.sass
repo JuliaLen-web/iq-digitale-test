@@ -7,10 +7,19 @@
     max-width: 475px
     margin-left: auto
     margin-bottom: 70px
+    +screen($tablet)
+      max-width: none
+      margin: 0 0 40px
+      text-align: left
 
   &__section
     width: 30%
     margin-right: 30px
+    +screen($tablet)
+      width: 100%
+      text-align: center
+      margin-right: 0
+      margin-bottom: 30px
 
     &-name
       +font(28px, 36px, 900)
@@ -24,6 +33,8 @@
 
     .socials
       margin-bottom: 40px
+      +screen($tablet)
+        justify-content: center
 
       a
         max-width: 14px
@@ -38,6 +49,8 @@
   &__gallery
     width: 70%
     position: relative
+    +screen($tablet)
+      width: 100%
 
     &-arrow
       position: absolute
@@ -45,6 +58,9 @@
       left: -120px
       width: 100px
       height: 20px
+      +screen($tablet)
+        bottom: -50px
+        left: calc(50% - 50px)
 
   .swiper-wrapper
     align-items: flex-end
@@ -54,6 +70,8 @@
     width: 163px
     height: 52%
     transition: .6s
+    +screen($mobile)
+      height: 100%
 
     &.swiper-slide-next + .swiper-slide
       height: 100%
@@ -62,3 +80,5 @@
       width: 100%
       height: 100%
       object-fit: cover
+      +screen($mobile)
+        object-position: top

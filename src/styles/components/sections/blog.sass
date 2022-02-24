@@ -1,11 +1,32 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
 
-.blog__content
-  margin-top: 70px
-  display: grid
-  grid-gap: 27px
-  grid-template-columns: 638px auto
-  grid-auto-rows: minmax(163px, 163px)
-  grid-template-areas: "content  sidebar"
+.blog
+  &__content
+    margin-top: 70px
+    display: grid
+    grid-gap: 27px
+    grid-template-columns: 638px auto
+    grid-auto-rows: minmax(163px, 163px)
+    grid-template-areas: "content  sidebar"
+    +screen($tablet)
+      grid-template-columns: auto
+      grid-auto-rows: auto
+      grid-template-areas: "content" "sidebar"
+
+  .blog__preview:not(.blog__preview_active)
+    +screen($tablet)
+      display: none
+
+  &_more .blog__preview:not(.blog__preview_active)
+    +screen($tablet)
+      display: flex
+
+  .button
+    display: none
+    margin: 20px auto
+    +screen($tablet)
+      display: block
+
+
 

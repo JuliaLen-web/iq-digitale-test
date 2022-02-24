@@ -3,11 +3,14 @@
 
 .statistics
   background: $base-dark
+  position: relative
 
   .container
     display: flex
     justify-content: space-between
     align-items: normal
+    +screen($mobile)
+      overflow: auto
 
     &:hover .statistics__item
       &,
@@ -29,3 +32,17 @@
           background: $accent
           top: -10px
           bottom: -10px
+          +screen($mobile-sm)
+            top: 0
+            bottom: 0
+
+  &:after
+    position: absolute
+    bottom: -40px
+    right: 20px
+    width: 40px
+    height: 20px
+    clip-path: polygon(0 0, 0% 100%, 100% 50%)
+    background: $accent
+    +screen($mobile-sm)
+      content: ''

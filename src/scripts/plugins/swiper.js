@@ -90,14 +90,11 @@ window.addEventListener('load', () => {
     },
 
     breakpoints: {
-      // when window width is >= 575px
       575: {
       },
-      // when window width is >= 770px
       770: {
         grabCursor: true,
       },
-      // when window width is >= 1024px
       1024: {
         grabCursor: false,
         effect: 'creative',
@@ -134,5 +131,16 @@ window.addEventListener('load', () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      770: {
+
+      },
+      1024: {
+        slidesPerView: 4,
+      }
+    }
   })
 })

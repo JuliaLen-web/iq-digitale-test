@@ -9,6 +9,8 @@
   color: $base-lightest
   text-align: center
   cursor: pointer
+  +screen($mobile)
+    min-width: 220px
 
   &-num,
   &-caption
@@ -48,6 +50,12 @@
       background: $accent
       top: -10px
       bottom: -10px
+      +screen($mobile-sm)
+        background: $base-dark
+        top: 0
+        bottom: 0
+
+
 
 
 
